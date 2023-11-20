@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 //const port = 3000
+var api = require("./router/api");
+
+app.use("/api", api);
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
